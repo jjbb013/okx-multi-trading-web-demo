@@ -1,6 +1,3 @@
-import { Router } from 'itty-router';
-import { createHmac } from 'crypto';
-
 // ======================== OKX API 客户端 ========================
 class OKXClient {
   constructor(apiKey, apiSecret, passphrase, isDemo = true) {
