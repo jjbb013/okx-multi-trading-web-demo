@@ -1,4 +1,4 @@
-name = "okx-trading-dashboard"
+name = "okx-monitor-01"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
