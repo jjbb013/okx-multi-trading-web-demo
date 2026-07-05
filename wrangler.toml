@@ -1,0 +1,11 @@
+name = "okx-trading-dashboard"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+OKX_DEMO = "true"
+
+# 在部署时通过 wrangler secret 设置：
+# wrangler secret put OKX_API_KEY
+# wrangler secret put OKX_API_SECRET  
+# wrangler secret put OKX_API_PASSPHRASE

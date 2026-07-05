@@ -1,0 +1,22 @@
+{
+  "name": "okx-multi-trading-web-demo",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker web dashboard for OKX trading bot monitoring",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "keywords": [
+    "okx",
+    "trading",
+    "cloudflare-worker",
+    "dashboard",
+    "cryptocurrency"
+  ],
+  "license": "MIT"
+}
