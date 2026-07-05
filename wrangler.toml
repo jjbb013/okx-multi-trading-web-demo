@@ -2,10 +2,9 @@ name = "okx-trading-dashboard"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-[vars]
-OKX_DEMO = "true"
-
-# 在部署时通过 wrangler secret 设置：
-# wrangler secret put OKX_API_KEY
-# wrangler secret put OKX_API_SECRET  
-# wrangler secret put OKX_API_PASSPHRASE
+# ⚠️ 部署后必须在 Cloudflare Dashboard → Workers → Settings → Variables 中配置：
+#   OKX_DEMO = "true"  (模拟盘) 或 "false" (实盘)
+# 同时通过 wrangler secret 设置以下 Secrets：
+#   wrangler secret put OKX_API_KEY
+#   wrangler secret put OKX_API_SECRET
+#   wrangler secret put OKX_API_PASSPHRASE

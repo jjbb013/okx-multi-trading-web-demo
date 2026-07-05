@@ -11,7 +11,21 @@
 
 ### 🚀 最快部署：点击上方按钮（推荐）
 
-点击顶部的 **「Deploy to Cloudflare Workers」** 按钮，登录你的 Cloudflare 账号，即可一键部署。部署完成后，在 Cloudflare Dashboard → Workers → 你的 Worker → Settings → Variables 中设置以下 Secrets：
+点击顶部的 **「Deploy to Cloudflare Workers」** 按钮，登录你的 Cloudflare 账号，即可一键部署。部署完成后，在 Cloudflare Dashboard → Workers → 你的 Worker → Settings → Variables 中设置以下配置：
+
+**Secrets（加密存储）**
+
+| Secret 名称 | 说明 |
+|-------------|------|
+| `OKX_API_KEY` | OKX API Key（建议只读权限） |
+| `OKX_API_SECRET` | OKX API Secret |
+| `OKX_API_PASSPHRASE` | OKX API Passphrase |
+
+**Variables（明文存储）**
+
+| Variable 名称 | 说明 |
+|---------------|------|
+| `OKX_DEMO` | `true` = 模拟盘（默认），`false` = 实盘 |
 
 | Secret 名称 | 说明 |
 |-------------|------|
@@ -87,10 +101,14 @@ npx wrangler secret put OKX_API_KEY
 npx wrangler secret put OKX_API_SECRET
 npx wrangler secret put OKX_API_PASSPHRASE
 
-# 5. 部署
+# 5. 设置环境变量（模拟盘 / 实盘）
+npx wrangler vars put OKX_DEMO
+# 输入 "true"（模拟盘）或 "false"（实盘）
+
+# 6. 部署
 npx wrangler deploy
 
-# 6. 获取访问地址
+# 7. 获取访问地址
 # 部署成功后终端会显示类似：
 # https://okx-trading-dashboard.your-account.workers.dev
 ```
@@ -183,7 +201,21 @@ okx-multi-trading-web-demo/
 
 ### 🚀 Quickest Deploy: Click the Button Above (Recommended)
 
-Click the **「Deploy to Cloudflare Workers」** button at the top, sign in to your Cloudflare account, and deploy in one click. After deployment, go to Cloudflare Dashboard → Workers → Your Worker → Settings → Variables and set the following Secrets:
+Click the **「Deploy to Cloudflare Workers」** button at the top, sign in to your Cloudflare account, and deploy in one click. After deployment, go to Cloudflare Dashboard → Workers → Your Worker → Settings → Variables and configure the following:
+
+**Secrets (encrypted)**
+
+| Secret Name | Description |
+|-------------|-------------|
+| `OKX_API_KEY` | OKX API Key (read-only recommended) |
+| `OKX_API_SECRET` | OKX API Secret |
+| `OKX_API_PASSPHRASE` | OKX API Passphrase |
+
+**Variables (plain text)**
+
+| Variable Name | Description |
+|---------------|-------------|
+| `OKX_DEMO` | `true` = demo mode (default), `false` = live mode |
 
 | Secret Name | Description |
 |-------------|-------------|
@@ -255,6 +287,13 @@ npm install
 npx wrangler login
 
 # 4. Set secrets (OKX API credentials)
+npx wrangler secret put OKX_API_KEY
+npx wrangler secret put OKX_API_SECRET
+npx wrangler secret put OKX_API_PASSPHRASE
+
+# 5. Set environment variable (demo / live)
+npx wrangler vars put OKX_DEMO
+# Enter "true" (demo) or "false" (live)
 npx wrangler secret put OKX_API_KEY
 npx wrangler secret put OKX_API_SECRET
 npx wrangler secret put OKX_API_PASSPHRASE
