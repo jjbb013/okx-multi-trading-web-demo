@@ -1,11 +1,25 @@
 # OKX 交易监控面板 / OKX Trading Web Monitor
 
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/jjbb013/okx-multi-trading-web-demo)
+
 > **Language / 语言**: [中文](#中文) | [English](#english)
 
 ---
 
 <a name="中文"></a>
 ## 中文
+
+### 🚀 最快部署：点击上方按钮（推荐）
+
+点击顶部的 **「Deploy to Cloudflare Workers」** 按钮，登录你的 Cloudflare 账号，即可一键部署。部署完成后，在 Cloudflare Dashboard → Workers → 你的 Worker → Settings → Variables 中设置以下 Secrets：
+
+| Secret 名称 | 说明 |
+|-------------|------|
+| `OKX_API_KEY` | OKX API Key（建议只读权限） |
+| `OKX_API_SECRET` | OKX API Secret |
+| `OKX_API_PASSPHRASE` | OKX API Passphrase |
+
+然后访问 Worker URL 即可查看监控面板。
 
 ### 项目概述
 
@@ -166,6 +180,18 @@ okx-multi-trading-web-demo/
 
 <a name="english"></a>
 ## English
+
+### 🚀 Quickest Deploy: Click the Button Above (Recommended)
+
+Click the **「Deploy to Cloudflare Workers」** button at the top, sign in to your Cloudflare account, and deploy in one click. After deployment, go to Cloudflare Dashboard → Workers → Your Worker → Settings → Variables and set the following Secrets:
+
+| Secret Name | Description |
+|-------------|-------------|
+| `OKX_API_KEY` | OKX API Key (read-only recommended) |
+| `OKX_API_SECRET` | OKX API Secret |
+| `OKX_API_PASSPHRASE` | OKX API Passphrase |
+
+Then visit the Worker URL to view the dashboard.
 
 ### Project Overview
 
